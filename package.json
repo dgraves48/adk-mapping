@@ -1,0 +1,41 @@
+{
+  "name": "adk-mapping",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "tauri": "tauri",
+    "test": "vitest run",
+    "data:osm": "cd scripts && python3 fetch_osm.py",
+    "data:core": "cd scripts && python3 build_core.py",
+    "data:packs": "cd scripts && python3 build_basemap.py && python3 build_terrain.py",
+    "packs:install": "mkdir -p \"$HOME/Library/Application Support/com.adkmapping.app/packs\" && cp packs/*.pmtiles \"$HOME/Library/Application Support/com.adkmapping.app/packs/\""
+  },
+  "dependencies": {
+    "@protomaps/basemaps": "^5.7.2",
+    "@tauri-apps/api": "^2",
+    "@tauri-apps/plugin-dialog": "^2.8.1",
+    "@tauri-apps/plugin-fs": "^2.6.0",
+    "@tauri-apps/plugin-opener": "^2",
+    "@tauri-apps/plugin-sql": "^2.5.0",
+    "flatbush": "^4.6.2",
+    "maplibre-contour": "^0.1.1",
+    "maplibre-gl": "^6.12.0",
+    "pmtiles": "^4.5.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2",
+    "@types/node": "^26.6.4",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react": "^6.0.2",
+    "typescript": "~6.0.3",
+    "vite": "^8.0.16",
+    "vitest": "^4.1.11"
+  }
+}

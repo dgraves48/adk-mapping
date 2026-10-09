@@ -1,0 +1,14 @@
+node_modules
+dist
+build
+packs
+tools
+src-tauri/target
+src-tauri/gen
+.DS_Store
+__pycache__
+*.tsbuildinfo
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
